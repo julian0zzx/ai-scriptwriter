@@ -1,0 +1,7 @@
+# Duanju Studio bundle patch.
+#
+# A bundle's patch is a top-level YAML array applied over the layers before it.
+# This one only inserts the plugin row; it never overrides a base row.
+- insert:
+    - id: ai-scriptwriter
+      name: '@ai-scriptwriter/scriptwriter'

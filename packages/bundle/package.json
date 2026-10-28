@@ -1,0 +1,21 @@
+{
+  "name": "@ai-scriptwriter/scriptwriter-bundle",
+  "version": "0.1.0",
+  "description": "Profile bundle for Duanju Studio: the patch layer that inserts the screenwriter plugin into a DSH profile",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "cordis.patch.yml"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "scripts": {
+    "build": "node --check index.js",
+    "typecheck": "node --check index.js",
+    "test": "node --test test.mjs"
+  },
+  "dependencies": { "@ai-scriptwriter/scriptwriter": "workspace:*" }
+}

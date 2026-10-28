@@ -1,0 +1,24 @@
+{
+  "name": "ai-scriptwriter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH plugin-based AI duanju scriptwriter",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "engines": { "node": ">=22" },
+  "packageManager": "pnpm@9.15.4",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "pack": "node scripts/pack.mjs",
+    "verify:dist": "node scripts/verify-dist.mjs",
+    "check": "pnpm run build && pnpm run typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "0.25.10",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  }
+}
